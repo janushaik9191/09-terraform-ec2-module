@@ -1,15 +1,15 @@
 terraform {
   required_providers {
     aws = {
-        source = "hashicorp/aws"
-        version = "5.88.0"
+      source  = "hashicorp/aws"
+      version = "5.88.0"
     }
   }
-  backend "s3"{
-    bucket = "daws-s3-remote"
-    key = "ec2-module-demo"
+  backend "s3" {
+    bucket         = "daws-s3-remote"
+    key            = "ec2-module-demo"
     dynamodb_table = "daws-dynamodb"
-    region = "us-east-1"
+    region         = "us-east-1"
   }
 }
 provider "aws" {
